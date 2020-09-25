@@ -13,6 +13,7 @@ function SerieController($parameter)
 
     $serie = normalize(api('singleSerie', $parameter));
     $series = normalize(api('tv'));
+    $similars = normalize(api('similar', $parameter));
 
     if (empty($serie) || empty($series)) {
         return header('Location: ' . BASE_PATH);
@@ -20,5 +21,5 @@ function SerieController($parameter)
 
     $youtubeId = youtube($serie->title) ?? '';
 
-    view('serie', ['serie' => $serie, 'series' => $series, 'id' => $youtubeId]);
+    view('serie', ['serie' => $serie, 'series' => $series, 'id' => $youtubeId, 'similars' => $similars]);
 }

@@ -14,6 +14,8 @@ function MovieController($parameter)
 
     $movie = normalize(api('singleMovie', $parameter));
     $series = normalize(api('tv'));
+    $similars = normalize(api('similar', $parameter));
+
 
     if (empty($movie) || empty($series)) {
         return header('Location: ' . BASE_PATH);
@@ -21,5 +23,5 @@ function MovieController($parameter)
 
     $youtubeId = youtube($movie->title) ?? '';
 
-    view('movie', ['movie' => $movie, 'series' => $series, 'id' => $youtubeId]);
+    view('movie', ['movie' => $movie, 'series' => $series, 'id' => $youtubeId, 'similars' => $similars]);
 }

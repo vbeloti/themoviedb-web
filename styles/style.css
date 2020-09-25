@@ -527,6 +527,49 @@ html {
     font-weight: normal;
 }
 
+.content__center__similars_item img {
+    border-radius: 8px;
+    max-width: 300px;
+}
+
+.content__center__similars_item h2 {
+    text-align: center;
+    max-width: 300px;
+}
+
+.content__center__similars > h2 {
+    margin-left: 1rem;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.content__center__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.content__center__similars > h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    bottom: -35px;
+    left: 0;
+    background-color: #3490de;
+    margin-bottom: 2rem;
+    transition: 1s;
+}
+
+.content__center__box {
+    margin-top: 2rem;
+}
+
+.content__center__similars_item {
+    margin: 0.4rem;
+    margin-top: 1.2rem;
+}
+
 
 @media (max-width: 1000px) {
 
