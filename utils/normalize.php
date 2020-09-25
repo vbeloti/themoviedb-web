@@ -17,7 +17,8 @@ function normalize($data)
                 'votes' => $movie->vote_average ?? '',
                 'id' => $movie->id ?? '',
                 'media_type' => $movie->media_type ?? '',
-                'production_companies' => $movie->production_companies ?? ''
+                'production_companies' => $movie->production_companies ?? '',
+                'genres' => $movie->genres ?? ''
             ];
 
 
@@ -32,7 +33,8 @@ function normalize($data)
             'votes' => $data->vote_average ?? '',
             'id' => $data->id ?? '',
             'media_type' => $data->media_type ?? '',
-            'production_companies' => $data->production_companies ?? ''
+            'production_companies' => $data->production_companies ?? '',
+            'genres' => $data->genres ?? ''
         ];
     }
 }

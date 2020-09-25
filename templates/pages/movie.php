@@ -6,14 +6,28 @@ include_once('./templates/partials/header.php'); ?>
 <div class="content__center">
     <div class="content__center__banner">
         <div class='content__center__banner_item' style='background-image: url(https://image.tmdb.org/t/p/original<?= $data['movie']->image; ?>);'>
-            <div class='content__center__banner_details'>
+            <div class='content__center__banner_details_movie'>
                 <h2><?= $data['movie']->title; ?></h2>
-                <p><?= $data['movie']->description; ?></p>
             </div>
         </div>
+        <h2 class="title__movie">Descrição</h2>
+        <p class="description__movie"><?= $data['movie']->description; ?></p>
     </div>
 
     <div class="content__center_box">
+        <div class="content__center__genres">
+            <h2>Gêneros</h2>
+            <div class="content__center__genres_box">
+                <?php foreach ($data['movie']->genres as $genre) { ?>
+                    <div class="content__center__genres_item">
+                        <h2><?= $genre->name ?? ''; ?></h2>
+                    </div>
+                <?php } ?>
+            </div>
+
+        </div>
+
+
         <div class="content__center__productions">
             <h2>Produtoras</h2>
             <div class="content__center__productions_box">
