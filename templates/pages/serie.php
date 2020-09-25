@@ -6,7 +6,7 @@ include_once('./templates/partials/header.php'); ?>
 <div class="content__center">
     <div class="content__center__banner">
         <div class='content__center__banner_item' style='background-image: url(https://image.tmdb.org/t/p/original<?= $data['serie']->image; ?>);'>
-            <div class='content__center__banner_details'>
+            <div class='content__center__banner_details_movie'>
                 <h2><?= $data['serie']->title; ?></h2>
             </div>
         </div>

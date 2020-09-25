@@ -42,7 +42,7 @@ function api(String $type = 'movie', String $id = null, String $query = null, St
             break;
 
         case 'youtube':
-            $url = "https://www.googleapis.com/youtube/v3/search?q={$query}&key={}";
+            $url = "https://www.googleapis.com/youtube/v3/search?q={$query}&key={$youtubeKey}";
             break;
         case 'trendingMovies':
             $url = "{$base_api}trending/movie/week?{$apiWithLang}&page={$page}";
