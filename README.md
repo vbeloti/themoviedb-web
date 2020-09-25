@@ -39,7 +39,7 @@ Esta aplicação foi desenvolvida em PHP utilizando a api <a href="https://devel
 <img src="https://github.com/vbeloti/themoviedb-web/blob/master/.github/themoviedb-php-1.jpg?raw=true" alt="Themoviedb" />
 
 ### Filme específico
-<img src="https://github.com/vbeloti/themoviedb-web/blob/master/.github/themoviedb-php-2.jpg?raw=true" alt="Themoviedb" />
+<img src="https://github.com/vbeloti/themoviedb-web/blob/master/.github/themoviedb-php-2-1.jpg?raw=true" alt="Themoviedb" />
 
 ### Filme em alta
 <img src="https://github.com/vbeloti/themoviedb-web/blob/master/.github/themoviedb-php-3.jpg?raw=true" alt="Themoviedb" />
