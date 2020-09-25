@@ -38,7 +38,6 @@ include_once('./templates/partials/header.php'); ?>
                     </div>
                 <?php } ?>
             </div>
-
         </div>
         <h1 class="content__center_box_title">Trailer</h1>
         <div class="content__center__movies">

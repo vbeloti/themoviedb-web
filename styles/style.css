@@ -486,7 +486,7 @@ html {
 
 .content__center__productions_box {
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     flex-wrap: wrap;
 }
 
@@ -503,6 +503,10 @@ html {
 
 .content__center__production_item:hover img {
     opacity: .8;
+}
+
+.content__center__genres h2 {
+    margin-left: 0.6rem;
 }
 
 .content__center__production_item h2 {

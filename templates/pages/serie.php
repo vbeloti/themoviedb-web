@@ -8,12 +8,37 @@ include_once('./templates/partials/header.php'); ?>
         <div class='content__center__banner_item' style='background-image: url(https://image.tmdb.org/t/p/original<?= $data['serie']->image; ?>);'>
             <div class='content__center__banner_details'>
                 <h2><?= $data['serie']->title; ?></h2>
-                <p><?= $data['serie']->description; ?></p>
             </div>
         </div>
+        <h2 class="title__movie">Descrição</h2>
+        <p class="description__movie"><?= $data['serie']->description; ?></p>
     </div>
 
     <div class="content__center_box">
+        <div class="content__center__genres">
+            <h2>Gêneros</h2>
+            <div class="content__center__genres_box">
+                <?php foreach ($data['serie']->genres as $genre) { ?>
+                    <div class="content__center__genres_item">
+                        <h2><?= $genre->name ?? ''; ?></h2>
+                    </div>
+                <?php } ?>
+            </div>
+
+        </div>
+
+
+        <div class="content__center__productions">
+            <h2>Produtoras</h2>
+            <div class="content__center__productions_box">
+                <?php foreach ($data['serie']->production_companies as $production) { ?>
+                    <div class="content__center__production_item">
+                        <h2><?= $production->name ?? ''; ?></h2>
+                        <img src="<?= isset($production->logo_path)  ? "https://image.tmdb.org/t/p/original{$production->logo_path}" : 'https://www.cowgirlcontractcleaning.com/wp-content/uploads/sites/360/2018/05/placeholder-img-4.jpg'; ?>" alt="">
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
         <h1 class="content__center_box_title">Trailer</h1>
         <div class="content__center__movies">
             <div class='content__center__youtube'>
