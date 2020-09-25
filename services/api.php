@@ -55,6 +55,10 @@ function api(String $type = 'movie', String $id = null, String $query = null, St
             $url = "{$base_api}movie/{$id}/similar?{$apiWithLang}";
             break;
 
+        case 'similarTv':
+            $url = "{$base_api}tv/{$id}/similar?{$apiWithLang}";
+            break;
+
         default:
             break;
     }

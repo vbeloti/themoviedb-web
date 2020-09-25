@@ -13,7 +13,7 @@ function SerieController($parameter)
 
     $serie = normalize(api('singleSerie', $parameter));
     $series = normalize(api('tv'));
-    $similars = normalize(api('similar', $parameter));
+    $similars = normalize(api('similarTv', $parameter));
 
     if (empty($serie) || empty($series)) {
         return header('Location: ' . BASE_PATH);

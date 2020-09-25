@@ -48,6 +48,18 @@ include_once('./templates/partials/header.php'); ?>
             </div>
         </div>
     </div>
+
+    <div class="content__center__similars">
+        <h2>Relacionados</h2>
+        <div class="content__center__box">
+            <?php foreach (array_slice($data['similars'], 0, 6) as $similars) { ?>
+                <div class="content__center__similars_item">
+                    <h2><?= $similars->title ?? ''; ?></h2>
+                    <a href="<?= correctPath(); ?>serie/<?= $similars->id ?? ''; ?>"><img src="<?= isset($similars->image)  ? "https://image.tmdb.org/t/p/original{$similars->image}" : 'https://www.cowgirlcontractcleaning.com/wp-content/uploads/sites/360/2018/05/placeholder-img-4.jpg'; ?>" alt=""></a>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
 </div>
 
 <div class="content__right">
